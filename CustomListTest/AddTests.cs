@@ -43,5 +43,34 @@ namespace CustomListTest
             int actualCount = testlist.Count;
             Assert.AreEqual(count, actualCount);
         }
+
+        public void addChars()
+        {
+            CustomList<char> chars = new CustomList<char>();
+            chars.Add('a');
+            chars.Add('b');
+            chars.Add('c');
+            chars.Add('d');
+
+            char expectedResult = 'a';
+            char ActualResult = chars[0];
+            Assert.AreEqual(expectedResult, ActualResult);
+
+            expectedResult = 'b';
+            ActualResult = chars[1];
+            Assert.AreEqual(expectedResult, ActualResult);
+
+            expectedResult = 'c';
+            ActualResult = chars[2];
+            Assert.AreEqual(expectedResult, ActualResult);
+
+            expectedResult = 'd';
+            ActualResult = chars[3];
+            Assert.AreEqual(expectedResult, ActualResult);
+
+            int count = 4;
+            int actualCount = chars.Count;
+            Assert.AreEqual(count, actualCount);
+        }
     }
 }
