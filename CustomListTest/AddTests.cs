@@ -93,7 +93,7 @@ namespace CustomListTest
             Double.Add(.7);
 
             double expectedResult = .5;
-            char ActualResult = Double[0];
+            double ActualResult = Double[0];
             Assert.AreEqual(expectedResult, ActualResult);
         }
     }
