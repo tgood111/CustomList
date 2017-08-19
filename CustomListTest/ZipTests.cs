@@ -75,5 +75,25 @@ namespace CustomListTest
             Assert.AreEqual("e", strings1[4]);
             Assert.AreEqual("f", strings1[5]);
         }
+        [TestMethod]
+        public void stringsZipTest()
+        {
+            CustomList<string> strings = new CustomList<string>();
+            strings.Add("w");
+            strings.Add("y");
+            
+
+            CustomList<string> strings2 = new CustomList<string>();
+            strings2.Add("x");
+            strings2.Add("z");
+            
+
+            strings.Zip(strings2); // [a,b,c,d,e,f]
+
+            Assert.AreEqual("w", strings[0]);
+            Assert.AreEqual("x", strings[1]);
+            Assert.AreEqual("y", strings[2]);
+            Assert.AreEqual("z", strings[3]);
+        }
     }
 }
