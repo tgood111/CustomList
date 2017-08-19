@@ -10,7 +10,7 @@ namespace CustomList
 {
     public class CustomList<T> : IEnumerable<T>
     {
-       
+
 
         // The array in the background
         private T[] _arr;
@@ -30,6 +30,15 @@ namespace CustomList
             foreach (var element in b)
             {
                 a.Add(element);
+            }
+            return a;
+        }
+        public static CustomList<T> operator -(CustomList<T> a, CustomList<T> b)
+        {
+            // Add every element from b into a
+            foreach (var element in b)
+            {
+                a.RemoveValue(element);
             }
             return a;
         }
