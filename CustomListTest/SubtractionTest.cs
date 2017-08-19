@@ -5,10 +5,11 @@ using CustomList;
 namespace CustomListTest
 {
     [TestClass]
-    public class AdditionOperatorTest
+    public class SubtractionTest
     {
+
         [TestMethod]
-        public void TestAddittion()
+        public void TestSubtraction()
         {
             CustomList<int> a = new CustomList<int>();
             a.Add(1);
@@ -16,7 +17,7 @@ namespace CustomListTest
             CustomList<int> b = new CustomList<int>();
             b.Add(2);
 
-            CustomList<int> c = a + b;
+            CustomList<int> c = a - b;
             Assert.AreEqual(1, c.Count);
         }
     }
