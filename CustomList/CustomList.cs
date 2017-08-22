@@ -35,7 +35,7 @@ namespace CustomList
         }
         public static CustomList<T> operator -(CustomList<T> a, CustomList<T> b)
         {
-            // Add every element from b into a
+            // subtract every element from b into a
             foreach (var element in b)
             {
                 a.RemoveValue(element);
